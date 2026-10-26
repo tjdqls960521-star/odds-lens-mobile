@@ -1,0 +1,25 @@
+{
+  "name": "odds-lens-mobile",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node --test test/*.test.mjs",
+    "test:mobile": "playwright test",
+    "audit:data": "node scripts/audit-v3.mjs",
+    "model:artifacts": "node scripts/build-historical-artifacts.mjs",
+    "model:historical": "python3 scripts/historical-backtest.py --out reports/historical-backtest.json && python3 scripts/historical-hierarchical-backtest.py --out reports/historical-hierarchical-backtest.json && node scripts/build-historical-artifacts.mjs",
+    "dev": "wrangler dev --local --config wrangler.local.jsonc --port 61872",
+    "migrate:local": "wrangler d1 migrations apply DB --local --config wrangler.local.jsonc"
+  },
+  "dependencies": {
+    "cheerio": "1.0.0",
+    "drizzle-orm": "^0.45.3",
+    "esbuild": "0.25.12",
+    "wrangler": "4.132.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "drizzle-kit": "^0.31.11"
+  }
+}

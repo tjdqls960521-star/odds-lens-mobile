@@ -1,0 +1,407 @@
+{
+  "schemaVersion": 2,
+  "evaluationId": "historical-eval-6a4012269f2e511cd268b00946b6886a1e7c1b728109926eb7d8ec009821cb66",
+  "baseModelVersion": "historical-m1-c478db930ef2f6b5d481bad4c57150cc3a72b5c48419e4af26d77c128c92c764",
+  "createdAt": "2026-09-28T08:40:03.235999+09:00",
+  "dataVersion": "dbc3fd446593e95319bc445e085cec7171d334563de078405cf05e3b76f2fe9d",
+  "evidenceTier": "historical-archive-chronological",
+  "quoteStage": "closing",
+  "split": {
+    "A": "2013–2023-12-24 학습",
+    "B": "2024-01-08~12-24 확률 보정",
+    "C": "2025-01-08~12-24 분류 경계 고정",
+    "D": "2026-01-08~ 후향 재현",
+    "embargo": "각 연도 경계 전후 7일 제외"
+  },
+  "approvedSports": [
+    "soccer"
+  ],
+  "models": [
+    {
+      "id": "soccer-total-2",
+      "sport": "soccer",
+      "market": "언오버",
+      "period": "full",
+      "outcomeKeys": [
+        "under",
+        "over"
+      ],
+      "engine": "power-calibration-v1",
+      "type": "M1",
+      "quoteStage": "closing",
+      "approvalBasis": "aggregate-sport-portfolio",
+      "alpha": 1.0549077201153525,
+      "bias": [
+        0.004801967142734933,
+        0
+      ],
+      "temperature": 0.9929627340449904,
+      "ridge": 0.02,
+      "trainingRows": 21354,
+      "calibrationRows": 6260,
+      "independentRows": 3614,
+      "independentEvents": 3614,
+      "metrics": {
+        "M0": {
+          "n": 3614,
+          "events": 3614,
+          "weeks": 36,
+          "log_loss": 0.6844700445453485,
+          "brier": 0.49139485065979743
+        },
+        "M1": {
+          "n": 3614,
+          "events": 3614,
+          "weeks": 36,
+          "log_loss": 0.6844638895922197,
+          "brier": 0.4913911293203961
+        },
+        "delta": 0.0000061549531286290166,
+        "deltaInterval": {
+          "blocks": 36,
+          "lower": -0.0003089494773435015,
+          "upper": 0.0003117558999443126,
+          "replicates": 5000,
+          "method": "weekly block bootstrap; rows within a calendar week resampled together"
+        }
+      }
+    },
+    {
+      "id": "soccer-general-3",
+      "sport": "soccer",
+      "market": "일반",
+      "period": "full",
+      "outcomeKeys": [
+        "home",
+        "draw",
+        "away"
+      ],
+      "engine": "power-calibration-v1",
+      "type": "M1",
+      "quoteStage": "closing",
+      "approvalBasis": "aggregate-sport-portfolio",
+      "alpha": 1.1103353056638903,
+      "bias": [
+        0.001987074372037207,
+        0.049631036550936695,
+        0
+      ],
+      "temperature": 0.9889222446159172,
+      "ridge": 0.02,
+      "trainingRows": 42230,
+      "calibrationRows": 6234,
+      "independentRows": 3637,
+      "independentEvents": 3637,
+      "metrics": {
+        "M0": {
+          "n": 3637,
+          "events": 3637,
+          "weeks": 36,
+          "log_loss": 0.9962542699417862,
+          "brier": 0.5950743499040595
+        },
+        "M1": {
+          "n": 3637,
+          "events": 3637,
+          "weeks": 36,
+          "log_loss": 0.9953268006414344,
+          "brier": 0.5946529084670278
+        },
+        "delta": 0.0009274693003519111,
+        "deltaInterval": {
+          "blocks": 36,
+          "lower": -0.000559275557656455,
+          "upper": 0.002489441356329405,
+          "replicates": 5000,
+          "method": "weekly block bootstrap; rows within a calendar week resampled together"
+        }
+      }
+    },
+    {
+      "id": "soccer-handicap-2",
+      "sport": "soccer",
+      "market": "핸디캡",
+      "period": "full",
+      "outcomeKeys": [
+        "home",
+        "away"
+      ],
+      "engine": "power-calibration-v1",
+      "type": "M1",
+      "quoteStage": "closing",
+      "approvalBasis": "aggregate-sport-portfolio",
+      "alpha": 1.193198672155149,
+      "bias": [
+        0.10169401359043252,
+        0
+      ],
+      "temperature": 0.9914023627832133,
+      "ridge": 0.02,
+      "trainingRows": 3520,
+      "calibrationRows": 1022,
+      "independentRows": 305,
+      "independentEvents": 305,
+      "metrics": {
+        "M0": {
+          "n": 305,
+          "events": 305,
+          "weeks": 31,
+          "log_loss": 0.4324820547031823,
+          "brier": 0.26412699965571323
+        },
+        "M1": {
+          "n": 305,
+          "events": 305,
+          "weeks": 31,
+          "log_loss": 0.4260760139647867,
+          "brier": 0.25981396662604767
+        },
+        "delta": 0.006406040738395517,
+        "deltaInterval": {
+          "blocks": 31,
+          "lower": -0.0053294018627349175,
+          "upper": 0.016715404069167387,
+          "replicates": 5000,
+          "method": "weekly block bootstrap; rows within a calendar week resampled together"
+        }
+      }
+    },
+    {
+      "id": "soccer-handicap-3",
+      "sport": "soccer",
+      "market": "핸디캡",
+      "period": "full",
+      "outcomeKeys": [
+        "home",
+        "draw",
+        "away"
+      ],
+      "engine": "power-calibration-v1",
+      "type": "M1",
+      "quoteStage": "closing",
+      "approvalBasis": "aggregate-sport-portfolio",
+      "alpha": 1.0982624116343083,
+      "bias": [
+        -0.00944879830244337,
+        0.03627083454457913,
+        0
+      ],
+      "temperature": 0.935166330526833,
+      "ridge": 0.02,
+      "trainingRows": 29562,
+      "calibrationRows": 6693,
+      "independentRows": 4794,
+      "independentEvents": 3627,
+      "metrics": {
+        "M0": {
+          "n": 4794,
+          "events": 3627,
+          "weeks": 36,
+          "log_loss": 0.9609125677693094,
+          "brier": 0.5689213991086148
+        },
+        "M1": {
+          "n": 4794,
+          "events": 3627,
+          "weeks": 36,
+          "log_loss": 0.9587395781586624,
+          "brier": 0.5672827271648339
+        },
+        "delta": 0.0021729896106470266,
+        "deltaInterval": {
+          "blocks": 36,
+          "lower": -0.00014200976121809563,
+          "upper": 0.004483875322281569,
+          "replicates": 5000,
+          "method": "weekly block bootstrap; rows within a calendar week resampled together"
+        }
+      }
+    }
+  ],
+  "highProbabilityPolicy": {
+    "approvedForDisplay": true,
+    "independentValidated": false,
+    "validationKind": "retrospective-redesign-replay",
+    "publicationTier": "research",
+    "selectionBasis": "historical-result-labels",
+    "classificationUnit": "event-best-market-outcome",
+    "tieBreak": "highest probability, then lexicographically greatest market identity; first outcome index on probability ties",
+    "oddsFloor": null,
+    "policyVersion": "historical-confidence-c1e8c75a660aa6b78c706344759e0e546628007460829ac75689e90830658d99",
+    "sport": "soccer",
+    "tiers": [
+      {
+        "id": "top",
+        "label": "상위 10% · 최상위 신뢰",
+        "metricLabel": "상위 10% 이내 누적",
+        "quantile": 0.9,
+        "threshold": 0.8167982581618414,
+        "selectedOn2025": true,
+        "historicallyReproduced": true,
+        "policy2025": {
+          "events": 638,
+          "weeks": 51,
+          "hits": 578,
+          "hitRate": 0.9059561128526645,
+          "meanProbability": 0.862340200195845,
+          "meanOdds": 1.0552507836990597,
+          "coverage": 0.10004704406460718,
+          "eligibleEvents": 6377,
+          "interval": {
+            "blocks": 51,
+            "lower": 0.8841642228739003,
+            "upper": 0.928374655647383,
+            "replicates": 5000,
+            "method": "weekly block bootstrap; rows within a calendar week resampled together"
+          },
+          "calibrationResidual": 0.04361591265681952,
+          "calibrationResidualInterval": {
+            "blocks": 51,
+            "lower": 0.021152246208991584,
+            "upper": 0.06648290047718852,
+            "replicates": 5000,
+            "method": "weekly block bootstrap; rows within a calendar week resampled together"
+          },
+          "baselineHitRate": 0.6401129057550572,
+          "uplift": 0.26584320709760734,
+          "upliftInterval": {
+            "blocks": 51,
+            "lower": 0.24187573397405615,
+            "upper": 0.2899659488988511,
+            "replicates": 5000,
+            "method": "paired calendar-week bootstrap; one best market/outcome per event"
+          },
+          "passes": true
+        },
+        "replay2026": {
+          "events": 434,
+          "weeks": 35,
+          "hits": 367,
+          "hitRate": 0.8456221198156681,
+          "meanProbability": 0.8532321076566156,
+          "meanOdds": 1.07036866359447,
+          "coverage": 0.11926353393789503,
+          "eligibleEvents": 3639,
+          "interval": {
+            "blocks": 35,
+            "lower": 0.8073394495412844,
+            "upper": 0.8848167539267016,
+            "replicates": 5000,
+            "method": "weekly block bootstrap; rows within a calendar week resampled together"
+          },
+          "calibrationResidual": -0.007609987840947463,
+          "calibrationResidualInterval": {
+            "blocks": 35,
+            "lower": -0.04625599853484104,
+            "upper": 0.03173932379918109,
+            "replicates": 5000,
+            "method": "weekly block bootstrap; rows within a calendar week resampled together"
+          },
+          "baselineHitRate": 0.6581478428139599,
+          "uplift": 0.18747427700170827,
+          "upliftInterval": {
+            "blocks": 35,
+            "lower": 0.14753412465630666,
+            "upper": 0.22749630601846427,
+            "replicates": 5000,
+            "method": "paired calendar-week bootstrap; one best market/outcome per event"
+          },
+          "passes": true
+        }
+      },
+      {
+        "id": "high",
+        "label": "상위 10–20% · 고신뢰 관찰",
+        "metricLabel": "상위 20% 이내 누적",
+        "quantile": 0.8,
+        "threshold": 0.7244201418389024,
+        "selectedOn2025": true,
+        "historicallyReproduced": true,
+        "policy2025": {
+          "events": 1276,
+          "weeks": 51,
+          "hits": 1070,
+          "hitRate": 0.8385579937304075,
+          "meanProbability": 0.8189330102922643,
+          "meanOdds": 1.1164498432601881,
+          "coverage": 0.20009408812921436,
+          "eligibleEvents": 6377,
+          "interval": {
+            "blocks": 51,
+            "lower": 0.8207885304659498,
+            "upper": 0.8568840579710145,
+            "replicates": 5000,
+            "method": "weekly block bootstrap; rows within a calendar week resampled together"
+          },
+          "calibrationResidual": 0.01962498343814323,
+          "calibrationResidualInterval": {
+            "blocks": 51,
+            "lower": 0.0027966981232423415,
+            "upper": 0.037192701755853076,
+            "replicates": 5000,
+            "method": "weekly block bootstrap; rows within a calendar week resampled together"
+          },
+          "baselineHitRate": 0.6401129057550572,
+          "uplift": 0.19844508797535032,
+          "upliftInterval": {
+            "blocks": 51,
+            "lower": 0.18265837482533986,
+            "upper": 0.21591865835080326,
+            "replicates": 5000,
+            "method": "paired calendar-week bootstrap; one best market/outcome per event"
+          },
+          "passes": true
+        },
+        "replay2026": {
+          "events": 917,
+          "weeks": 35,
+          "hits": 745,
+          "hitRate": 0.8124318429661941,
+          "meanProbability": 0.8109982852862224,
+          "meanOdds": 1.1329334787350056,
+          "coverage": 0.25199230557845564,
+          "eligibleEvents": 3639,
+          "interval": {
+            "blocks": 35,
+            "lower": 0.7852004110996916,
+            "upper": 0.8382502543234995,
+            "replicates": 5000,
+            "method": "weekly block bootstrap; rows within a calendar week resampled together"
+          },
+          "calibrationResidual": 0.0014335576799716643,
+          "calibrationResidualInterval": {
+            "blocks": 35,
+            "lower": -0.024742259500413043,
+            "upper": 0.026332355523410785,
+            "replicates": 5000,
+            "method": "weekly block bootstrap; rows within a calendar week resampled together"
+          },
+          "baselineHitRate": 0.6581478428139599,
+          "uplift": 0.1542840001522342,
+          "upliftInterval": {
+            "blocks": 35,
+            "lower": 0.12960790910884823,
+            "upper": 0.17971193574545308,
+            "replicates": 5000,
+            "method": "paired calendar-week bootstrap; one best market/outcome per event"
+          },
+          "passes": true
+        }
+      }
+    ],
+    "reason": "RETROSPECTIVE_POLICY_REPLAY"
+  },
+  "limitations": [
+    "No true odds observation/publish timestamps; match time orders rows but does not prove either quote existed at a fixed forecast horizon.",
+    "No result-known timestamp; using later calendar periods prevents temporal model leakage at row level but cannot prove label availability dates.",
+    "Source timezone is unspecified; timestamps are used verbatim, so week boundaries can be shifted.",
+    "Settlement rules and result labels are not independently verified; handicap/total scores are transformed in some rows and cannot reconstruct settlement safely.",
+    "Canonical event identity is inferred from datetime/league/team strings and is not a provider event ID.",
+    "Highest round/item id is only a deterministic duplicate resolution proxy; true sale publication order is unavailable.",
+    "Closing odds may be unavailable at the app current-quote decision time; opening and closing stages are evaluated separately for sensitivity.",
+    "The high-confidence tiers were redesigned after the original 2026 test was reviewed; 2026 is retrospective replay evidence, not a new independent holdout.",
+    "A seven-day embargo on both sides of every year boundary reduces label-boundary leakage because result-known timestamps are absent."
+  ],
+  "sourceEvaluationId": "historical-eval-358d5a5733049f6a29a1eaa2fe706e3c7c6808c09d18ffb6a03f04c73508e7bc",
+  "artifactHash": "6a4012269f2e511cd268b00946b6886a1e7c1b728109926eb7d8ec009821cb66"
+}

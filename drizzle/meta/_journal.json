@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1790523150338,
+      "tag": "0000_massive_blindfold",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1790523684979,
+      "tag": "0001_immutable_ledger",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1791047520798,
+      "tag": "0002_dear_ghost_rider",
+      "breakpoints": true
+    }
+  ]
+}

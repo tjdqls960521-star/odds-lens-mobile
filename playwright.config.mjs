@@ -1,0 +1,1 @@
+export default {testDir:'./test',testMatch:'mobile-v3.spec.mjs',timeout:45000,workers:1,use:{browserName:'chromium',headless:true},reporter:[['list'],['json',{outputFile:'reports/mobile-tests.json'}]]};

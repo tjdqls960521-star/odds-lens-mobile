@@ -1,0 +1,752 @@
+{
+  "schemaVersion": 3,
+  "evaluation_id": "historical-eval-6a4012269f2e511cd268b00946b6886a1e7c1b728109926eb7d8ec009821cb66",
+  "source_evaluation_id": "historical-eval-358d5a5733049f6a29a1eaa2fe706e3c7c6808c09d18ffb6a03f04c73508e7bc",
+  "status": "model_validated_policy_retrospective",
+  "model_version": "historical-m1-c478db930ef2f6b5d481bad4c57150cc3a72b5c48419e4af26d77c128c92c764",
+  "policy_version": "historical-confidence-c1e8c75a660aa6b78c706344759e0e546628007460829ac75689e90830658d99",
+  "modelTrained": true,
+  "independentValidationPassed": true,
+  "policyIndependentValidationPassed": false,
+  "reason_codes": [
+    "POLICY_RETROSPECTIVE_ONLY",
+    "M2_NOT_BETTER"
+  ],
+  "historicalAudit": {
+    "baselineRows": 352632,
+    "retainedMarketRows": 326708,
+    "crossSportQuarantinedRows": 99,
+    "duplicateRowsRemoved": 12,
+    "quoteObservationTimestamps": false,
+    "resultKnownTimestamps": false,
+    "scope": "2013~2026 네 종목 과거 파일. 시간순 후향 검증; 운영 모델 승인 범위는 soccer 최종배당 단계"
+  },
+  "trainingEventCount": null,
+  "trainingMarketCount": 96666,
+  "independentEventCount": 3639,
+  "metrics": {
+    "M0": {
+      "logLoss": 0.8773743641567373,
+      "brier": 0.5464092569317623,
+      "eventCount": 3639,
+      "n": 12350
+    },
+    "M1": {
+      "logLoss": 0.8760977160219486,
+      "brier": 0.5455414431828056,
+      "eventCount": 3639,
+      "n": 12350,
+      "calibration": [
+        {
+          "lower": 0,
+          "upper": 0.1,
+          "n": 792,
+          "predicted": 0.07332767233282554,
+          "observed": 0.0707070707070707
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "n": 4239,
+          "predicted": 0.15818943883766512,
+          "observed": 0.16041519226232603
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.3,
+          "n": 9811,
+          "predicted": 0.24813446133327965,
+          "observed": 0.24859851187442666
+        },
+        {
+          "lower": 0.3,
+          "upper": 0.4,
+          "n": 3688,
+          "predicted": 0.34715204226379726,
+          "observed": 0.3440889370932755
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "n": 5785,
+          "predicted": 0.45106641404349496,
+          "observed": 0.45030250648228176
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6,
+          "n": 5741,
+          "predicted": 0.5488673730567553,
+          "observed": 0.5481623410555653
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.7,
+          "n": 1816,
+          "predicted": 0.6338078754050183,
+          "observed": 0.6299559471365639
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.8,
+          "n": 713,
+          "predicted": 0.7492969132542404,
+          "observed": 0.7798036465638148
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "n": 512,
+          "predicted": 0.8398935024046781,
+          "observed": 0.82421875
+        },
+        {
+          "lower": 0.9,
+          "upper": 1,
+          "n": 34,
+          "predicted": 0.9082191821299215,
+          "observed": 0.9411764705882353
+        }
+      ]
+    },
+    "M2": {
+      "logLoss": 0.8764152320490505,
+      "brier": 0.5457899830861294,
+      "eventCount": 3639,
+      "n": 12350,
+      "approved": false
+    }
+  },
+  "calibration": [
+    {
+      "lower": 0,
+      "upper": 0.1,
+      "n": 792,
+      "predicted": 0.07332767233282554,
+      "observed": 0.0707070707070707
+    },
+    {
+      "lower": 0.1,
+      "upper": 0.2,
+      "n": 4239,
+      "predicted": 0.15818943883766512,
+      "observed": 0.16041519226232603
+    },
+    {
+      "lower": 0.2,
+      "upper": 0.3,
+      "n": 9811,
+      "predicted": 0.24813446133327965,
+      "observed": 0.24859851187442666
+    },
+    {
+      "lower": 0.3,
+      "upper": 0.4,
+      "n": 3688,
+      "predicted": 0.34715204226379726,
+      "observed": 0.3440889370932755
+    },
+    {
+      "lower": 0.4,
+      "upper": 0.5,
+      "n": 5785,
+      "predicted": 0.45106641404349496,
+      "observed": 0.45030250648228176
+    },
+    {
+      "lower": 0.5,
+      "upper": 0.6,
+      "n": 5741,
+      "predicted": 0.5488673730567553,
+      "observed": 0.5481623410555653
+    },
+    {
+      "lower": 0.6,
+      "upper": 0.7,
+      "n": 1816,
+      "predicted": 0.6338078754050183,
+      "observed": 0.6299559471365639
+    },
+    {
+      "lower": 0.7,
+      "upper": 0.8,
+      "n": 713,
+      "predicted": 0.7492969132542404,
+      "observed": 0.7798036465638148
+    },
+    {
+      "lower": 0.8,
+      "upper": 0.9,
+      "n": 512,
+      "predicted": 0.8398935024046781,
+      "observed": 0.82421875
+    },
+    {
+      "lower": 0.9,
+      "upper": 1,
+      "n": 34,
+      "predicted": 0.9082191821299215,
+      "observed": 0.9411764705882353
+    }
+  ],
+  "selectedGroup": {
+    "tier": "top",
+    "label": "상위 10% · 최상위 신뢰",
+    "hitRate": 0.8456221198156681,
+    "coverage": 0.11926353393789503,
+    "events": 434,
+    "markets": 434,
+    "settledEvents": 434,
+    "cancelledEvents": 0,
+    "voidEvents": 0,
+    "void": 0,
+    "reason": "후향 시간순 재현"
+  },
+  "modelComparison": "soccer M1 채택 · M2 추가예측력 미확인",
+  "operatingModel": "M1",
+  "comparison": {
+    "M1vsM0": {
+      "mean": 0.0012766481347886024,
+      "interval": {
+        "blocks": 36,
+        "lower": 0.0003441076651321994,
+        "upper": 0.0022848758281428325,
+        "replicates": 5000,
+        "method": "weekly block bootstrap; rows within a calendar week resampled together"
+      }
+    },
+    "M2vsM1": {
+      "blocks": 36,
+      "lower": -0.0007979106228257377,
+      "upper": 0.00021275016592663934,
+      "replicates": 5000,
+      "method": "weekly block bootstrap; rows within a calendar week resampled together"
+    }
+  },
+  "scope": {
+    "sport": "soccer",
+    "league": "전체",
+    "markets": [
+      "언오버/2결과",
+      "일반/3결과",
+      "핸디캡/2결과",
+      "핸디캡/3결과"
+    ],
+    "period": "full",
+    "quoteStage": "closing"
+  },
+  "horizon": "과거 최종배당 열 기준 후향 검증. 현재 판매 중 배당은 최종배당 단계 대리값",
+  "brierConvention": "모든 결과의 제곱오차 합 (결과 수로 나누지 않음)",
+  "policy": {
+    "approvedForDisplay": true,
+    "independentValidated": false,
+    "validationKind": "retrospective-redesign-replay",
+    "publicationTier": "research",
+    "selectionBasis": "historical-result-labels",
+    "classificationUnit": "event-best-market-outcome",
+    "tieBreak": "highest probability, then lexicographically greatest market identity; first outcome index on probability ties",
+    "oddsFloor": null,
+    "policyVersion": "historical-confidence-c1e8c75a660aa6b78c706344759e0e546628007460829ac75689e90830658d99",
+    "sport": "soccer",
+    "tiers": [
+      {
+        "id": "top",
+        "label": "상위 10% · 최상위 신뢰",
+        "metricLabel": "상위 10% 이내 누적",
+        "quantile": 0.9,
+        "threshold": 0.8167982581618414,
+        "selectedOn2025": true,
+        "historicallyReproduced": true,
+        "policy2025": {
+          "events": 638,
+          "weeks": 51,
+          "hits": 578,
+          "hitRate": 0.9059561128526645,
+          "meanProbability": 0.862340200195845,
+          "meanOdds": 1.0552507836990597,
+          "coverage": 0.10004704406460718,
+          "eligibleEvents": 6377,
+          "interval": {
+            "blocks": 51,
+            "lower": 0.8841642228739003,
+            "upper": 0.928374655647383,
+            "replicates": 5000,
+            "method": "weekly block bootstrap; rows within a calendar week resampled together"
+          },
+          "calibrationResidual": 0.04361591265681952,
+          "calibrationResidualInterval": {
+            "blocks": 51,
+            "lower": 0.021152246208991584,
+            "upper": 0.06648290047718852,
+            "replicates": 5000,
+            "method": "weekly block bootstrap; rows within a calendar week resampled together"
+          },
+          "baselineHitRate": 0.6401129057550572,
+          "uplift": 0.26584320709760734,
+          "upliftInterval": {
+            "blocks": 51,
+            "lower": 0.24187573397405615,
+            "upper": 0.2899659488988511,
+            "replicates": 5000,
+            "method": "paired calendar-week bootstrap; one best market/outcome per event"
+          },
+          "passes": true
+        },
+        "replay2026": {
+          "events": 434,
+          "weeks": 35,
+          "hits": 367,
+          "hitRate": 0.8456221198156681,
+          "meanProbability": 0.8532321076566156,
+          "meanOdds": 1.07036866359447,
+          "coverage": 0.11926353393789503,
+          "eligibleEvents": 3639,
+          "interval": {
+            "blocks": 35,
+            "lower": 0.8073394495412844,
+            "upper": 0.8848167539267016,
+            "replicates": 5000,
+            "method": "weekly block bootstrap; rows within a calendar week resampled together"
+          },
+          "calibrationResidual": -0.007609987840947463,
+          "calibrationResidualInterval": {
+            "blocks": 35,
+            "lower": -0.04625599853484104,
+            "upper": 0.03173932379918109,
+            "replicates": 5000,
+            "method": "weekly block bootstrap; rows within a calendar week resampled together"
+          },
+          "baselineHitRate": 0.6581478428139599,
+          "uplift": 0.18747427700170827,
+          "upliftInterval": {
+            "blocks": 35,
+            "lower": 0.14753412465630666,
+            "upper": 0.22749630601846427,
+            "replicates": 5000,
+            "method": "paired calendar-week bootstrap; one best market/outcome per event"
+          },
+          "passes": true
+        }
+      },
+      {
+        "id": "high",
+        "label": "상위 10–20% · 고신뢰 관찰",
+        "metricLabel": "상위 20% 이내 누적",
+        "quantile": 0.8,
+        "threshold": 0.7244201418389024,
+        "selectedOn2025": true,
+        "historicallyReproduced": true,
+        "policy2025": {
+          "events": 1276,
+          "weeks": 51,
+          "hits": 1070,
+          "hitRate": 0.8385579937304075,
+          "meanProbability": 0.8189330102922643,
+          "meanOdds": 1.1164498432601881,
+          "coverage": 0.20009408812921436,
+          "eligibleEvents": 6377,
+          "interval": {
+            "blocks": 51,
+            "lower": 0.8207885304659498,
+            "upper": 0.8568840579710145,
+            "replicates": 5000,
+            "method": "weekly block bootstrap; rows within a calendar week resampled together"
+          },
+          "calibrationResidual": 0.01962498343814323,
+          "calibrationResidualInterval": {
+            "blocks": 51,
+            "lower": 0.0027966981232423415,
+            "upper": 0.037192701755853076,
+            "replicates": 5000,
+            "method": "weekly block bootstrap; rows within a calendar week resampled together"
+          },
+          "baselineHitRate": 0.6401129057550572,
+          "uplift": 0.19844508797535032,
+          "upliftInterval": {
+            "blocks": 51,
+            "lower": 0.18265837482533986,
+            "upper": 0.21591865835080326,
+            "replicates": 5000,
+            "method": "paired calendar-week bootstrap; one best market/outcome per event"
+          },
+          "passes": true
+        },
+        "replay2026": {
+          "events": 917,
+          "weeks": 35,
+          "hits": 745,
+          "hitRate": 0.8124318429661941,
+          "meanProbability": 0.8109982852862224,
+          "meanOdds": 1.1329334787350056,
+          "coverage": 0.25199230557845564,
+          "eligibleEvents": 3639,
+          "interval": {
+            "blocks": 35,
+            "lower": 0.7852004110996916,
+            "upper": 0.8382502543234995,
+            "replicates": 5000,
+            "method": "weekly block bootstrap; rows within a calendar week resampled together"
+          },
+          "calibrationResidual": 0.0014335576799716643,
+          "calibrationResidualInterval": {
+            "blocks": 35,
+            "lower": -0.024742259500413043,
+            "upper": 0.026332355523410785,
+            "replicates": 5000,
+            "method": "weekly block bootstrap; rows within a calendar week resampled together"
+          },
+          "baselineHitRate": 0.6581478428139599,
+          "uplift": 0.1542840001522342,
+          "upliftInterval": {
+            "blocks": 35,
+            "lower": 0.12960790910884823,
+            "upper": 0.17971193574545308,
+            "replicates": 5000,
+            "method": "paired calendar-week bootstrap; one best market/outcome per event"
+          },
+          "passes": true
+        }
+      }
+    ],
+    "reason": "RETROSPECTIVE_POLICY_REPLAY",
+    "approved": true,
+    "policyTiers": [
+      {
+        "id": "top",
+        "label": "상위 10% · 최상위 신뢰",
+        "metricLabel": "상위 10% 이내 누적",
+        "quantile": 0.9,
+        "threshold": 0.8167982581618414,
+        "selectedOn2025": true,
+        "historicallyReproduced": true,
+        "policy2025": {
+          "events": 638,
+          "weeks": 51,
+          "hits": 578,
+          "hitRate": 0.9059561128526645,
+          "meanProbability": 0.862340200195845,
+          "meanOdds": 1.0552507836990597,
+          "coverage": 0.10004704406460718,
+          "eligibleEvents": 6377,
+          "interval": {
+            "blocks": 51,
+            "lower": 0.8841642228739003,
+            "upper": 0.928374655647383,
+            "replicates": 5000,
+            "method": "weekly block bootstrap; rows within a calendar week resampled together"
+          },
+          "calibrationResidual": 0.04361591265681952,
+          "calibrationResidualInterval": {
+            "blocks": 51,
+            "lower": 0.021152246208991584,
+            "upper": 0.06648290047718852,
+            "replicates": 5000,
+            "method": "weekly block bootstrap; rows within a calendar week resampled together"
+          },
+          "baselineHitRate": 0.6401129057550572,
+          "uplift": 0.26584320709760734,
+          "upliftInterval": {
+            "blocks": 51,
+            "lower": 0.24187573397405615,
+            "upper": 0.2899659488988511,
+            "replicates": 5000,
+            "method": "paired calendar-week bootstrap; one best market/outcome per event"
+          },
+          "passes": true
+        },
+        "replay2026": {
+          "events": 434,
+          "weeks": 35,
+          "hits": 367,
+          "hitRate": 0.8456221198156681,
+          "meanProbability": 0.8532321076566156,
+          "meanOdds": 1.07036866359447,
+          "coverage": 0.11926353393789503,
+          "eligibleEvents": 3639,
+          "interval": {
+            "blocks": 35,
+            "lower": 0.8073394495412844,
+            "upper": 0.8848167539267016,
+            "replicates": 5000,
+            "method": "weekly block bootstrap; rows within a calendar week resampled together"
+          },
+          "calibrationResidual": -0.007609987840947463,
+          "calibrationResidualInterval": {
+            "blocks": 35,
+            "lower": -0.04625599853484104,
+            "upper": 0.03173932379918109,
+            "replicates": 5000,
+            "method": "weekly block bootstrap; rows within a calendar week resampled together"
+          },
+          "baselineHitRate": 0.6581478428139599,
+          "uplift": 0.18747427700170827,
+          "upliftInterval": {
+            "blocks": 35,
+            "lower": 0.14753412465630666,
+            "upper": 0.22749630601846427,
+            "replicates": 5000,
+            "method": "paired calendar-week bootstrap; one best market/outcome per event"
+          },
+          "passes": true
+        }
+      },
+      {
+        "id": "high",
+        "label": "상위 10–20% · 고신뢰 관찰",
+        "metricLabel": "상위 20% 이내 누적",
+        "quantile": 0.8,
+        "threshold": 0.7244201418389024,
+        "selectedOn2025": true,
+        "historicallyReproduced": true,
+        "policy2025": {
+          "events": 1276,
+          "weeks": 51,
+          "hits": 1070,
+          "hitRate": 0.8385579937304075,
+          "meanProbability": 0.8189330102922643,
+          "meanOdds": 1.1164498432601881,
+          "coverage": 0.20009408812921436,
+          "eligibleEvents": 6377,
+          "interval": {
+            "blocks": 51,
+            "lower": 0.8207885304659498,
+            "upper": 0.8568840579710145,
+            "replicates": 5000,
+            "method": "weekly block bootstrap; rows within a calendar week resampled together"
+          },
+          "calibrationResidual": 0.01962498343814323,
+          "calibrationResidualInterval": {
+            "blocks": 51,
+            "lower": 0.0027966981232423415,
+            "upper": 0.037192701755853076,
+            "replicates": 5000,
+            "method": "weekly block bootstrap; rows within a calendar week resampled together"
+          },
+          "baselineHitRate": 0.6401129057550572,
+          "uplift": 0.19844508797535032,
+          "upliftInterval": {
+            "blocks": 51,
+            "lower": 0.18265837482533986,
+            "upper": 0.21591865835080326,
+            "replicates": 5000,
+            "method": "paired calendar-week bootstrap; one best market/outcome per event"
+          },
+          "passes": true
+        },
+        "replay2026": {
+          "events": 917,
+          "weeks": 35,
+          "hits": 745,
+          "hitRate": 0.8124318429661941,
+          "meanProbability": 0.8109982852862224,
+          "meanOdds": 1.1329334787350056,
+          "coverage": 0.25199230557845564,
+          "eligibleEvents": 3639,
+          "interval": {
+            "blocks": 35,
+            "lower": 0.7852004110996916,
+            "upper": 0.8382502543234995,
+            "replicates": 5000,
+            "method": "weekly block bootstrap; rows within a calendar week resampled together"
+          },
+          "calibrationResidual": 0.0014335576799716643,
+          "calibrationResidualInterval": {
+            "blocks": 35,
+            "lower": -0.024742259500413043,
+            "upper": 0.026332355523410785,
+            "replicates": 5000,
+            "method": "weekly block bootstrap; rows within a calendar week resampled together"
+          },
+          "baselineHitRate": 0.6581478428139599,
+          "uplift": 0.1542840001522342,
+          "upliftInterval": {
+            "blocks": 35,
+            "lower": 0.12960790910884823,
+            "upper": 0.17971193574545308,
+            "replicates": 5000,
+            "method": "paired calendar-week bootstrap; one best market/outcome per event"
+          },
+          "passes": true
+        }
+      }
+    ]
+  },
+  "policyTiers": [
+    {
+      "id": "top",
+      "label": "상위 10% · 최상위 신뢰",
+      "metricLabel": "상위 10% 이내 누적",
+      "quantile": 0.9,
+      "threshold": 0.8167982581618414,
+      "selectedOn2025": true,
+      "historicallyReproduced": true,
+      "policy2025": {
+        "events": 638,
+        "weeks": 51,
+        "hits": 578,
+        "hitRate": 0.9059561128526645,
+        "meanProbability": 0.862340200195845,
+        "meanOdds": 1.0552507836990597,
+        "coverage": 0.10004704406460718,
+        "eligibleEvents": 6377,
+        "interval": {
+          "blocks": 51,
+          "lower": 0.8841642228739003,
+          "upper": 0.928374655647383,
+          "replicates": 5000,
+          "method": "weekly block bootstrap; rows within a calendar week resampled together"
+        },
+        "calibrationResidual": 0.04361591265681952,
+        "calibrationResidualInterval": {
+          "blocks": 51,
+          "lower": 0.021152246208991584,
+          "upper": 0.06648290047718852,
+          "replicates": 5000,
+          "method": "weekly block bootstrap; rows within a calendar week resampled together"
+        },
+        "baselineHitRate": 0.6401129057550572,
+        "uplift": 0.26584320709760734,
+        "upliftInterval": {
+          "blocks": 51,
+          "lower": 0.24187573397405615,
+          "upper": 0.2899659488988511,
+          "replicates": 5000,
+          "method": "paired calendar-week bootstrap; one best market/outcome per event"
+        },
+        "passes": true
+      },
+      "replay2026": {
+        "events": 434,
+        "weeks": 35,
+        "hits": 367,
+        "hitRate": 0.8456221198156681,
+        "meanProbability": 0.8532321076566156,
+        "meanOdds": 1.07036866359447,
+        "coverage": 0.11926353393789503,
+        "eligibleEvents": 3639,
+        "interval": {
+          "blocks": 35,
+          "lower": 0.8073394495412844,
+          "upper": 0.8848167539267016,
+          "replicates": 5000,
+          "method": "weekly block bootstrap; rows within a calendar week resampled together"
+        },
+        "calibrationResidual": -0.007609987840947463,
+        "calibrationResidualInterval": {
+          "blocks": 35,
+          "lower": -0.04625599853484104,
+          "upper": 0.03173932379918109,
+          "replicates": 5000,
+          "method": "weekly block bootstrap; rows within a calendar week resampled together"
+        },
+        "baselineHitRate": 0.6581478428139599,
+        "uplift": 0.18747427700170827,
+        "upliftInterval": {
+          "blocks": 35,
+          "lower": 0.14753412465630666,
+          "upper": 0.22749630601846427,
+          "replicates": 5000,
+          "method": "paired calendar-week bootstrap; one best market/outcome per event"
+        },
+        "passes": true
+      }
+    },
+    {
+      "id": "high",
+      "label": "상위 10–20% · 고신뢰 관찰",
+      "metricLabel": "상위 20% 이내 누적",
+      "quantile": 0.8,
+      "threshold": 0.7244201418389024,
+      "selectedOn2025": true,
+      "historicallyReproduced": true,
+      "policy2025": {
+        "events": 1276,
+        "weeks": 51,
+        "hits": 1070,
+        "hitRate": 0.8385579937304075,
+        "meanProbability": 0.8189330102922643,
+        "meanOdds": 1.1164498432601881,
+        "coverage": 0.20009408812921436,
+        "eligibleEvents": 6377,
+        "interval": {
+          "blocks": 51,
+          "lower": 0.8207885304659498,
+          "upper": 0.8568840579710145,
+          "replicates": 5000,
+          "method": "weekly block bootstrap; rows within a calendar week resampled together"
+        },
+        "calibrationResidual": 0.01962498343814323,
+        "calibrationResidualInterval": {
+          "blocks": 51,
+          "lower": 0.0027966981232423415,
+          "upper": 0.037192701755853076,
+          "replicates": 5000,
+          "method": "weekly block bootstrap; rows within a calendar week resampled together"
+        },
+        "baselineHitRate": 0.6401129057550572,
+        "uplift": 0.19844508797535032,
+        "upliftInterval": {
+          "blocks": 51,
+          "lower": 0.18265837482533986,
+          "upper": 0.21591865835080326,
+          "replicates": 5000,
+          "method": "paired calendar-week bootstrap; one best market/outcome per event"
+        },
+        "passes": true
+      },
+      "replay2026": {
+        "events": 917,
+        "weeks": 35,
+        "hits": 745,
+        "hitRate": 0.8124318429661941,
+        "meanProbability": 0.8109982852862224,
+        "meanOdds": 1.1329334787350056,
+        "coverage": 0.25199230557845564,
+        "eligibleEvents": 3639,
+        "interval": {
+          "blocks": 35,
+          "lower": 0.7852004110996916,
+          "upper": 0.8382502543234995,
+          "replicates": 5000,
+          "method": "weekly block bootstrap; rows within a calendar week resampled together"
+        },
+        "calibrationResidual": 0.0014335576799716643,
+        "calibrationResidualInterval": {
+          "blocks": 35,
+          "lower": -0.024742259500413043,
+          "upper": 0.026332355523410785,
+          "replicates": 5000,
+          "method": "weekly block bootstrap; rows within a calendar week resampled together"
+        },
+        "baselineHitRate": 0.6581478428139599,
+        "uplift": 0.1542840001522342,
+        "upliftInterval": {
+          "blocks": 35,
+          "lower": 0.12960790910884823,
+          "upper": 0.17971193574545308,
+          "replicates": 5000,
+          "method": "paired calendar-week bootstrap; one best market/outcome per event"
+        },
+        "passes": true
+      }
+    }
+  ],
+  "split": {
+    "A": "2013–2023-12-24 학습",
+    "B": "2024-01-08~12-24 확률 보정",
+    "C": "2025-01-08~12-24 분류 경계 고정",
+    "D": "2026-01-08~ 후향 재현",
+    "embargo": "각 연도 경계 전후 7일 제외"
+  },
+  "limitations": [
+    "과거 파일에는 개별 배당 관측시각·결과 확인시각·원본 시간대가 없어 고정된 경기 전 시점 성능을 주장하지 않습니다.",
+    "현재 판매 중 배당에 표시하는 값은 과거 최종배당 단계에서 검증한 보정식의 연구값입니다.",
+    "고신뢰 기준은 2025 구간에서 경기별 최고 모델확률의 상위 10%·20% 경계로 고정했습니다. 2026 결과는 정책 설계 뒤 다시 본 후향 재현이며 새 독립 검증이 아닙니다.",
+    "고신뢰는 적중 가능성 분류입니다. 평균 배당이 낮아 수익성이나 기대값 우위를 뜻하지 않습니다.",
+    "팀·리그·배당구간 M2는 M1보다 개선되지 않아 비활성화했습니다."
+  ],
+  "created_at": "2026-09-28T08:40:03.235999+09:00",
+  "data_version": "dbc3fd446593e95319bc445e085cec7171d334563de078405cf05e3b76f2fe9d",
+  "evaluation_kind": "historical-archive-chronological-model-validation-with-retrospective-policy",
+  "artifactHash": "6a4012269f2e511cd268b00946b6886a1e7c1b728109926eb7d8ec009821cb66"
+}

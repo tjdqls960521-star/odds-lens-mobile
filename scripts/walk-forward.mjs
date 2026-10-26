@@ -1,0 +1,11 @@
+import {readFile,mkdir,writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {walkForward} from '../src/model-engine.mjs';
+const [input,protocolFile,out]=process.argv.slice(2);
+if(!input||!protocolFile||!out)throw Error('Usage: node scripts/walk-forward.mjs verified-rows.json frozen-windows.json output-directory');
+const inputText=await readFile(input,'utf8'),protocolText=await readFile(protocolFile,'utf8'),config=JSON.parse(protocolText);
+if(!config.frozenAt||Date.parse(config.frozenAt)>=Date.parse(config.windows?.[0]?.policyEnd))throw Error('All windows must be frozen before the first D period.');
+const result=walkForward(JSON.parse(inputText),config);
+result.dataVersion=createHash('sha256').update(inputText).digest('hex');result.protocolHash=createHash('sha256').update(protocolText).digest('hex');
+await mkdir(out,{recursive:true});await writeFile(out+'/walk-forward.json',JSON.stringify(result,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({status:result.status,folds:result.folds.length,independentEvents:result.independentEventCount,out}));

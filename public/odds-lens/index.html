@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#123b2e">
+  <meta name="description" content="베트맨 공식 배당의 동일 배당 통계와 팀별 과거 적중 기록을 확인하는 ODDS LENS">
+  <title>ODDS LENS · 배당통계</title>
+  <link rel="stylesheet" href="app.css?v=20260928-7">
+  <link rel="stylesheet" href="visual.css?v=20260928-7">
+  <link rel="stylesheet" href="prediction.css?v=20260928-7">
+  <link rel="stylesheet" href="sequence-cart.css?v=20261005-3">
+  <link rel="stylesheet" href="discovery.css?v=20261005-3">
+  <link rel="stylesheet" href="workspace.css?v=20261005-3">
+  <link rel="stylesheet" href="odds-history.css?v=20261013-1">
+  <link rel="stylesheet" href="workbench.css?v=20261013-2">
+  <link rel="stylesheet" href="pick-mobile.css?v=20261014-1">
+  <link rel="stylesheet" href="traffic-light.css?v=20261014-4">
+  <link rel="stylesheet" href="market-reading.css?v=20261020-3">
+  <link rel="icon" href="icon.svg">
+  <link rel="manifest" href="manifest.webmanifest">
+</head>
+<body>
+  <a class="skip-link" href="#app">본문으로 이동</a>
+  <aside>
+    <a class="brand" href="#today" data-route="today"><span class="lens" aria-hidden="true">◎</span><span>ODDS LENS<small>배당에서 찾는 과거 기록</small></span></a>
+    <span class="mobile-brand-label">배당 분석</span>
+    <div class="nav-label">분석 메뉴</div>
+    <nav id="navigation" aria-label="주요 메뉴"></nav>
+    <div class="aside-note"><b>같은 배당, 실제 기록.</b><p>팀·리그·종목의 적중 기록을 비교합니다. 과거 적중률은 이번 경기의 예측확률이 아닙니다.</p></div>
+    <a class="back-link" href="../">Baseball Quant</a>
+  </aside>
+  <div class="shell">
+    <header>
+      <span class="breadcrumb">배당 분석</span>
+      <div id="sports" class="sports" role="group" aria-label="종목 선택"></div>
+      <button id="health" class="status" data-route="data" aria-label="데이터 연결 상태 보기">현재 경기 소스 대기</button>
+    </header>
+    <main>
+      <div id="notice" class="notice" role="status">국내 경기와 배당을 읽고 있습니다.</div>
+      <div id="app" aria-live="polite"><div class="page-heading"><div><h1>오늘의 배당 특이점</h1><p>공식 경기와 과거 기록을 준비하고 있습니다.</p></div></div></div>
+    </main>
+    <footer>ODDS LENS <span>동일 배당 · 실제 기록 · KST</span></footer>
+  </div>
+  <dialog id="menu-drawer" aria-labelledby="menu-drawer-title">
+    <div class="menu-drawer-head"><h2 id="menu-drawer-title">분석 메뉴</h2><button class="button" data-close-menu aria-label="분석 메뉴 닫기">닫기</button></div>
+    <div id="secondary-navigation"></div>
+  </dialog>
+  <dialog id="evidence-drawer" aria-labelledby="evidence-drawer-title"></dialog>
+  <dialog id="odds-history-drawer" aria-labelledby="odds-history-title"></dialog>
+  <dialog id="workbench-drawer" aria-labelledby="workbench-dialog-title"></dialog>
+  <div id="workbench-dock" aria-label="선택한 경기와 픽" hidden></div>
+  <div id="quick-cart" hidden></div>
+  <div id="toast" role="status" hidden></div>
+  <script type="module" src="app-v2.js?v=20261020-3"></script>
+</body>
+</html>

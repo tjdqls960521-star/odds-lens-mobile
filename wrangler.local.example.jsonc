@@ -1,0 +1,8 @@
+{
+  "name": "odds-lens-mobile-local",
+  "main": "src/worker.mjs",
+  "compatibility_date": "2026-09-15",
+  "assets": { "directory": "public", "binding": "ASSETS", "run_worker_first": true },
+  "d1_databases": [{ "binding": "DB", "database_name": "odds-lens-local", "database_id": "REPLACE_WITH_LOCAL_D1_ID", "migrations_dir": "drizzle" }],
+  "r2_buckets": [{ "binding": "ODDS_STORE", "bucket_name": "odds-lens-local" }]
+}

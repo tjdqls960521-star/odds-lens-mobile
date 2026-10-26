@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.wrangler/
+.sites-runtime/
+.dev.vars
+.env
+.env.*
+!.env.example
+wrangler.secret.jsonc
+
+test-results/
+playwright-report/
+__pycache__/
+*.pyc
+
+wrangler.local.jsonc
+.openai/hosting.json
